@@ -180,3 +180,32 @@ img{
 	background-color: #d6d6d6;
 	border-radius:10px ;
 }
+/* main content */
+.content{
+	width:calc(100vw - 160px) ;
+
+}
+.chips-wrapper{
+	overflow-x: scroll;
+	display: flex;
+	margin-left: 5px;
+	padding-left: 14px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.chips-wrapper::-webkit-scrollbar {
+	height: 6px;
+}
+.chip:hover{
+	background-color: #c0c0c0;
+}
+.chip{
+	margin: 12px 6px;
+	background-color: #d6d6d6;
+	padding: 6px 35px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+/* Video container*/

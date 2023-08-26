@@ -209,3 +209,24 @@ img{
 	cursor: pointer;
 }
 /* Video container*/
+.video-container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap:18px;
+	padding: 20px 25px;
+	overflow-y: scroll;
+	height:(100vh - 116px) ;
+}
+.video-box{
+	position: relative;
+	width: auto;
+	height: 145px;
+	display: block;
+}
+.channel-logo{
+	position:relative;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	overflow: hidden;
+}

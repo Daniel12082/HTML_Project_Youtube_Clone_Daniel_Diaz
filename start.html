@@ -2,42 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+	<script src="/main.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Player</title>
+    <title>Youtube</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo-container">
-            <i class="ri-menu-line"></i>
-            <div class="logo">
-                <div class="logo-img">
-                    <img src="img/logo.png" alt="YouTube">
-                </div>
-                <h1 id="logo-txt">YouTube</h1>
-            </div>
-        </div>
-        <div class="search-container">
-            <form action="">
-                <input type="text" placeholder="Search">
-                <button class="search"><i class="ri-search-line"></i></button>
-            </form>
-        </div>
-        <div class="profile-container">
-            <i class="ri-video-add-line"></i>
-            <i class="ri-grid-fill"></i>
-            <i class="ri-notification-4-line"></i>
-            <div class="profile-box">
-                <img src="img/avatar.png" alt="User Profile">
-            </div>
-        </div>
-    </div>
-    <div class="body-container">
-        <div class="sidebar">
-            <div class="sidebar-items">
+	<div class="header">
+		<div class="logo-container">
+			<i class="ri-menu-line"></i>
+			<div class="logo">
+				<div class="logo-img">
+					<img src="img/logo.png" alt="Youtube">
+				</div>
+				<h1 id="logo-txt">YouTube</h1>
+			</div>
+		</div>
+		<div class="search-container">
+			<form action="">
+				<input type="text" placeholder="Search" id="">
+			</form>
+			<button class="search"><i class="ri-search-line"></i></button>
+			<button class="mic"><i class="ri-mic-line"></i></button>
+		</div>
+		<div class="profile-container">
+			<i class="ri-video-add-line"></i>
+			<i class="ri-grid-fill"></i>
+			<i class="ri-notification-4-line"></i>
+			<div class="profile-box">
+				<img src="img/avatar.png" alt="" height="40px" width="40px">
+			</div>
+		</div>
+	</div>
+	<div class="body-container">
+		<div class="sidebar">
+			<div class="sidebar-items">
 				<a href="#" class="sidebar-item"><i class="ri-home-5-line"></i><p>Home</p></a>
 				<a href="#" class="sidebar-item"><i class="ri-compass-3-line"></i><p>Explore</p></a>
 				<a href="#" class="sidebar-item"><i class="ri-wireless-charging-line"></i><p>shorts</p></a>
@@ -60,18 +64,10 @@
 				<a href="#" class="sidebar-item"><i class="ri-question-line"></i><p>Help</p></a>
 				<a href="#" class="sidebar-item"><i class="ri-feedback-line"></i><p>Send Feedback</p></a>
 			</div>
-        </div>
-        <div class="content">
-            <div class="video-container">
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="recommended-videos">
-                <!-- Videos recomendados -->
-            </div>
-        </div>
-    </div>
+		</div>
+		<div class="content">
+		</div>
+	</div>
 <script src="main.js"></script>
 </body>
 </html>

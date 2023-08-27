@@ -143,13 +143,14 @@ img{
 /*Body container*/
 .body-container{
 	display: flex;
+	flex-direction: row;
 	position: fixed;
 	height: calc(100vh - 60px);
+	width: 100%;
 	top:60px
 }
 .sidebar{
 	padding-top: 0;
-	width: 140px;
 	overflow-y: scroll;
 }
 .sidebar-items a{
@@ -184,7 +185,7 @@ img{
 	border-radius:10px ;
 }
 .small-sidebar {
-	width:80px;
+	width:10%;
 }
 .small-sidebar .sidebar-items .sidebar-item p{
 	display: none;
@@ -192,10 +193,13 @@ img{
 .small-sidebar .sidebar-items .sidebar-item-arrow p{
 	display: none;
 }
+
 /* main content */
 .content{
-	width:calc(100vw - 160px) ;
-
+	width:calc(100vw - 7%) ;
+}
+.small-content {
+	width:calc(100vw - 5%) ;
 }
 .chips-wrapper{
 	overflow-x: scroll;
@@ -224,7 +228,7 @@ img{
 .video-container{
 	display: grid;
 	grid-template-columns: repeat(4, 2fr);
-	grid-gap:50px;
+	grid-gap:1%;
 	padding: 20px 25px;
 	overflow-y: scroll;
 	height:calc(100vh - 110px) ;

@@ -143,13 +143,15 @@ img{
 /*Body container*/
 .body-container{
 	display: flex;
+	flex-direction: row;
 	position: fixed;
 	height: calc(100vh - 60px);
+	width: 100%;
 	top:60px
 }
 .sidebar{
+	width:0%;
 	padding-top: 0;
-	width: 140px;
 	overflow-y: scroll;
 }
 .sidebar-items a{
@@ -184,15 +186,19 @@ img{
 	border-radius:10px ;
 }
 .small-sidebar {
-	width:80px;
+	width:auto;
 }
 .small-sidebar .sidebar-items .sidebar-item p{
-	display: none;
+	display:contents;
 }
 .small-sidebar .sidebar-items .sidebar-item-arrow p{
-	display: none;
+	display: contents;
 }
+
 /* main content */
 .content{
-	width:calc(100vw - 160px) ;
+	width:calc(100vw) ;
+}
+.small-content {
+	width:calc(100vw - 7%) ;
 }

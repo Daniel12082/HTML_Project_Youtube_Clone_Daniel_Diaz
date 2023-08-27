@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Player</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <i class="ri-menu-line"></i>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="img/logo.png" alt="YouTube">
+                </div>
+                <h1 id="logo-txt">YouTube</h1>
+            </div>
+        </div>
+        <div class="search-container">
+            <form action="">
+                <input type="text" placeholder="Search">
+                <button class="search"><i class="ri-search-line"></i></button>
+            </form>
+        </div>
+        <div class="profile-container">
+            <i class="ri-video-add-line"></i>
+            <i class="ri-grid-fill"></i>
+            <i class="ri-notification-4-line"></i>
+            <div class="profile-box">
+                <img src="img/avatar.png" alt="User Profile">
+            </div>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="sidebar">
+            <div class="sidebar-items">
+				<a href="#" class="sidebar-item"><i class="ri-home-5-line"></i><p>Home</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-compass-3-line"></i><p>Explore</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-wireless-charging-line"></i><p>shorts</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-rss-line"></i><p>Subs</p></a>
+				<hr>
+				<a href="#" class="sidebar-item"><i class="ri-links-line"></i><p>Library</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-history-line"></i><p>History</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-video-line"></i><p>Your Video</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-time-line"></i><p>Watch later</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-play-list-2-line"></i><p>All videos</p></a>
+				<a href="#" class="sidebar-item-arrow"><i class="ri-arrow-down-s-line"></i><p>Show More</p></a>
+				<hr>
+				<h5 class="more">More from youtube</h5>
+				<a href="#" class="sidebar-item"><i class="ri-keyboard-box-line"></i><p>Gaming</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-live-line"></i><p>Live</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-award-line"></i><p>Sport</p></a>
+				<hr>
+				<a href="#" class="sidebar-item"><i class="ri-settings-5-line"></i><p>setting</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-flag-line"></i><p>Report history</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-question-line"></i><p>Help</p></a>
+				<a href="#" class="sidebar-item"><i class="ri-feedback-line"></i><p>Send Feedback</p></a>
+			</div>
+        </div>
+        <div class="content">
+            <div class="video-container">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="recommended-videos">
+                <!-- Videos recomendados -->
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

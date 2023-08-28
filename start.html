@@ -2,72 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/styles.css">
-	<script src="/main.js"></script>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/Youtube_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube</title>
+    <title>Play-video</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="header">
-		<div class="logo-container">
-			<i class="ri-menu-line"></i>
-			<div class="logo">
-				<div class="logo-img">
-					<img src="img/logo.png" alt="Youtube">
-				</div>
-				<h1 id="logo-txt">YouTube</h1>
-			</div>
-		</div>
-		<div class="search-container">
-			<form action="">
-				<input type="text" placeholder="Search" id="">
-			</form>
-			<button class="search"><i class="ri-search-line"></i></button>
-			<button class="mic"><i class="ri-mic-line"></i></button>
-		</div>
-		<div class="profile-container">
-			<i class="ri-video-add-line"></i>
-			<i class="ri-grid-fill"></i>
-			<i class="ri-notification-4-line"></i>
-			<div class="profile-box">
-				<img src="img/avatar.png" alt="" height="40px" width="40px">
-			</div>
-		</div>
-	</div>
-	<div class="body-container">
-		<div class="sidebar">
-			<div class="sidebar-items">
-				<a href="#" class="sidebar-item"><i class="ri-home-5-line"></i><p>Home</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-compass-3-line"></i><p>Explore</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-wireless-charging-line"></i><p>shorts</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-rss-line"></i><p>Subs</p></a>
-				<hr>
-				<a href="#" class="sidebar-item"><i class="ri-links-line"></i><p>Library</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-history-line"></i><p>History</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-video-line"></i><p>Your Video</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-time-line"></i><p>Watch later</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-play-list-2-line"></i><p>All videos</p></a>
-				<a href="#" class="sidebar-item-arrow"><i class="ri-arrow-down-s-line"></i><p>Show More</p></a>
-				<hr>
-				<h5 class="more">More from youtube</h5>
-				<a href="#" class="sidebar-item"><i class="ri-keyboard-box-line"></i><p>Gaming</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-live-line"></i><p>Live</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-award-line"></i><p>Sport</p></a>
-				<hr>
-				<a href="#" class="sidebar-item"><i class="ri-settings-5-line"></i><p>setting</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-flag-line"></i><p>Report history</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-question-line"></i><p>Help</p></a>
-				<a href="#" class="sidebar-item"><i class="ri-feedback-line"></i><p>Send Feedback</p></a>
-			</div>
-		</div>
-		<div class="content">
-		</div>
-	</div>
-<script src="js/main.js"></script>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="img/menu.png" alt="menu" class="menu-icon">
+            <img src="img/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="img/search.png" alt="Search">
+            </div>
+            <img src="img/voice-search.png" class="mic-icon">
+
+        </div>
+        <div class="nav-right flex-div">
+            <img src="img/upload.png">
+            <img src="img/more.png">
+            <img src="img/notification.png">
+            <img src="img/Jack.png" class="user-icon">
+        </div>
+    </nav>
+
+<div class="container play-container">
+    <div class="row">   
+        <div class="play-video">
+            <video controls autoplay>
+                <source src="img/video.mp4" type="video/mp4">
+            </video>
+            <div class="tags">
+                <a href="">#coding</a> <a href="">#HTML</a> <a href="">#CSS</a> 
+                <a href="">#JAVASCRIPT</a>
+            </div>
+            <h3>Best Video programing expert master</h3>
+            <div class="play-video-info">
+                <p>40011 views &bull; 30 minutes</p>
+                <div>
+                    <a href=""><img src="img/like.png">125</a>
+                    <a href=""><img src="img/dislike.png">12</a>
+                    <a href=""><img src="img/share.png">share</a>
+                    <a href=""><img src="img/save.png">save</a>
+                </div>
+            </div>
+            <hr>
+            <div class="plublisher">
+                <img src="img/Jack.png">
+                <div>
+                    <p>Easy play videogames</p>
+                    <span>510K subscribers</span>
+                </div>
+                <BUtton type="button">Subscribe</BUtton>
+            </div>
+            <div class="vid-description">
+                <p>channel 1 thats makes </p>
+                <p>Subscribe easy tutorials good videos form  America</p>
+                <hr>
+                <h4>134 comments</h4>
+                <div class="add-comment">
+                    <img src="img/Jack.png" alt="perfil">
+                    <input type="text" placeholder="write comments...">
+                </div>
+                <div class="old-comment">
+                    <img src="img/simon.png" alt="img-comment">
+                    <div>
+                        <h3>Simon Ramires <span>2 days ago</span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, vitae. Exercitationem itaque ipsum repellendus, fuga impedit est pariatur autem non illo corporis saepe totam at asperiores ab quo eveniet. Ducimus?</p>
+                        <div class="acomment-action">
+                            <img src="img/like.png">
+                            <span>244</span>
+                            <img src="img/dislike.png">
+                            <span>12</span>
+                            <span>REPLAY</span>
+                            <a href="">ALL replies  </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rigth-sidebar">
+            <div class="side-video-list">
+                <a href="" class="small-thumbnail"><img src="img/thumbnail1.png"></a>                
+                <div class="vid-info">
+                    <a href="">Best video in th word</a>
+                    <p>Eze pis</p>
+                    <p>view 29k 2 days</p>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>    
 </body>
 </html>

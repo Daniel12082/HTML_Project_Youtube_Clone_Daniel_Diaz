@@ -32,18 +32,11 @@ let sidebar = async()=>{
     let sid = await sidebarpos.json();
     let selection3 = document.querySelector("#sidebar")
     selection3.insertAdjacentHTML  ("beforeend", /*html*/ `
-    <div class="shortcut-links">
-    <a href="/index.html"><img src="${sid.sidebar[]}"><p>Home</p></a>
-    ${sid.sidebar.map((value)`
-    `)}
-            
-            <a href=""><img src="img/explore.png"><p>Explore</p></a>
-            <a href=""><img src="img/subscription.png"><p>Subscription</p></a>
-            <a href=""><img src="img/library.png"><p>Library</p></a>
-            <a href=""><img src="img/history.png"><p>History</p></a>
-            <a href=""><img src="img/playlist.png"><p>Playlist</p></a>
-            <a href=""><img src="img/messages.png"><p>Messages</p></a>
-            <a href=""><img src="img/show-more.png"><p>show More</p></a>
-            <hr>`)
+    <a href="/index.html"><img src="${sid.sidebar.principal.images}"><p>${sid.sidebar.principal.text}</p></a>
+    ${sid.sidebar.secondary.map((value)=>/*html*/ `
+    <a href=""><img src="${value.images}"><p>${value.text}</p></a>
+    <hr>`  )(" ")}
+`)
 }
+sidebar()
 video()

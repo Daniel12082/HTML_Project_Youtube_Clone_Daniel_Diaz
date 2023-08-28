@@ -1,9 +1,10 @@
 {
-    "sidebar":[
+    "sidebar":{
         "principal":{
             "text":"Home",
             "images":"../img/home.png"
         },
+        "secondary":[
         {
             "text":"Explore",
             "images":"../img/explore.png"
@@ -31,6 +32,6 @@
         {
             "text":"show More",
             "images":"../img/show-more.png"
-        }
-    ]
+        }]
+    }
 }

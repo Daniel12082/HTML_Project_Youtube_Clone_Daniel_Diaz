@@ -1,4 +1,3 @@
-
 let video =async()=>{
     let videos = await fetch(`../json/videos.json`);
     let channel = await fetch(`../json/channel.json`);
@@ -19,15 +18,14 @@ let video =async()=>{
             </div>
         </div>`).join(" ")}
     `)
-let Selection2 = document.querySelector("#video")
-Selection.insertAdjacentHTML("beforeend",/*html*/ `
-<div class="banner">
-        <img src="" alt="" id=" banner">
+    let Selection2 = document.querySelector("#banner")
+    Selection2.insertAdjacentHTML("beforeend",/*html*/ `
+    <div class="banner">
+            <img src="${cha.banner.desktop[5].url}" alt="">
     </div>
-`)
+    `)
 }
-
-let sidebar = async()=>{
+let sidebaright = async()=>{
     let sidebarpos = await fetch(`../json/config.json`);
     let sid = await sidebarpos.json();
     let selection3 = document.querySelector("#sidebar")
@@ -35,8 +33,9 @@ let sidebar = async()=>{
     <a href="/index.html"><img src="${sid.sidebar.principal.images}"><p>${sid.sidebar.principal.text}</p></a>
     ${sid.sidebar.secondary.map((value)=>/*html*/ `
     <a href=""><img src="${value.images}"><p>${value.text}</p></a>
-    <hr>`  )(" ")}
+    `  ).join(" ")}
+    <hr>
 `)
 }
-sidebar()
 video()
+sidebaright()

@@ -64,7 +64,31 @@ nav{
     width: 15px;
 }
 /*------RESULT-BOX------*/
-
+.box-search-result{
+    flex-direction:column;
+    width: 23%;
+    overflow:hidden;
+    overflow-y: scroll;
+    position:absolute;
+    z-index: 2;
+    margin-right: 1%;
+    margin-left: 0px;
+    background-color: #E8E8E8;
+    margin-top: 2%;
+    border-radius: 
+    20px;color: #fff;
+    padding: 1%;
+}
+.box-search-results{
+    margin-top:5px; 
+    width: 440px ; 
+    height: 300px;
+    padding-left: 30px;
+}
+.results{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
 /*------SIDEBAR---------*/
 .sidebar{
     background: #fff;

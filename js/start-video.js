@@ -28,17 +28,16 @@ let listvideo =async()=>{
         </div>`).join(" ")}
     `)
 }
-
 let screenvideo= async()=>{
+    let id = localID
+    console.log(id)
     let channel = await fetch(`../json/channel.json`);
     let details = await fetch(url,options);
     let det = await details.json();
     let cha = await channel.json();
     let Selection2 = document.querySelector("#play-video");
     Selection2.insertAdjacentHTML("beforeend",/*html*/ `
-    <video controls autoplay>
-        <source src="img/video.mp4" type="video/mp4">
-    </video>
+    <iframe width=100% height=5% src="https://www.youtube.com/embed/${id}?si=uSQ-OWYwAACGFsV9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <h3>${det.title}</h3>
     <div class="play-video-info">
         <p>${det.stats.views} &bull; ${det.publishedDate}</p>

@@ -15,7 +15,7 @@ let video =async()=>{
     let Selection = document.querySelector("#videos");
     Selection.insertAdjacentHTML("beforeend",/*html*/ `
         ${vid.contents.map((value)=>/*html*/` 
-        <div class="vid-list">
+        <div class="vid-list" data-video-id="${value.video.videoId}">
             <a href="start.html"><img src="${value.video.thumbnails[3].url}" class="thumbnai1"></a>
             <div class="flex-div">
                 <img src="${cha.avatar[2].url}">
@@ -27,7 +27,19 @@ let video =async()=>{
             </div>
         </div>`).join(" ")}
     `)
-    
+
+    const info = document.querySelectorAll(".vid-list")
+        console.log(info);
+        
+        info.forEach(video =>{
+            video.addEventListener('click', () =>{
+                let videoID = video.getAttribute("data-video-id")
+                console.log(videoID);
+                localStorage.setItem('Id', videoID)
+                window.location.href = 'start.html';
+            })
+        })
+        
     let Selection2 = document.querySelector("#banner")
     Selection2.insertAdjacentHTML("beforeend",/*html*/ `
     <div class="banner">
@@ -65,7 +77,6 @@ let sidebaright = async()=>{
 //     } catch (error) {
 //         console.error(error);
 //     }
-// }
-
+// }    
 video()
 sidebaright()

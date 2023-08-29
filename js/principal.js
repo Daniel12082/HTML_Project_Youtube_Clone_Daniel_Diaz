@@ -2,11 +2,13 @@ var menuIcon = document.querySelector(".menu-icon");
 var sidebar = document.querySelector(".sidebar");    
 var container = document.querySelector(".container"); 
 
+/*Funcion que abre la sidebar al precionar el icono */
 menuIcon.onclick = function() { 
     sidebar.classList.toggle("small-sidebar");
     container.classList.toggle("large-container");
 }
 
+/*Funcion que trae todos los video de la pagina principal*/
 let video =async()=>{
     let videos = await fetch(`../json/videos.json`);
     let channel = await fetch(`../json/channel.json`);
@@ -27,7 +29,7 @@ let video =async()=>{
             </div>
         </div>`).join(" ")}
     `)
-
+/*Funcion que guarda el id del video en localstorage y lo llamo en el el javascript del reproductor de video*/
     const info = document.querySelectorAll(".vid-list")
         console.log(info);
         
@@ -39,7 +41,7 @@ let video =async()=>{
                 window.location.href = 'start.html';
             })
         })
-        
+/*Cambio de banner */
     let Selection2 = document.querySelector("#banner")
     Selection2.insertAdjacentHTML("beforeend",/*html*/ `
     <div class="banner">
@@ -60,23 +62,5 @@ let sidebaright = async()=>{
     <hr>
 `)
 }
-
-// let wrapSuggestions = async (query) => {
-//     // const url = `https://youtube138.p.rapidapi.com/channel/search/?id=${channelId}&q=${query}&hl=en&gl=US`;
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': '65ad5ad44bmsh773a97a88fa6da5p1534e5jsn00dec9fa147b',
-//             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
-//         }
-//     };
-
-//     try {
-//         const response = await fetch("../json/videos.json");
-//         const result = await response.json();
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }    
 video()
 sidebaright()

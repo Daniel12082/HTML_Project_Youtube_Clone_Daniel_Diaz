@@ -225,11 +225,20 @@ nav{
 }
 .side-video-list{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 8px;
+    padding-left: 1%;
+    padding: 2%;
+}
+.box-video{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
 }
 .side-video-list img{
     width: 100%;
+    border-radius: 10px;
 }
 .side-video-list .small-thumbnail{
     flex-basis: 49%;

@@ -2,6 +2,7 @@ let localID = localStorage.getItem('Id')
 
 const urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
 const url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
+const urlchanel =``
 const options = {
 	method: 'GET',
 	headers: {
@@ -18,7 +19,7 @@ let listvideo =async()=>{
     let Selection = document.querySelector("#videos");
     Selection.insertAdjacentHTML("beforeend",/*html*/ `
         ${vid.contents.map((value)=>/*html*/` 
-        <div class="box-video">
+        <div class="box-video" data-video-id="${value.video.videoId}">
         <a href="" class="small-thumbnail"><img src="${value.video.thumbnails[3].url}"></a>                
                 <div class="vid-info">
                     <a href="start.html">${value.video.title}</a>
@@ -27,6 +28,15 @@ let listvideo =async()=>{
                 </div>
         </div>`).join(" ")}
     `)
+    const info = document.querySelectorAll(".box-video")
+
+        info.forEach(video =>{
+            video.addEventListener('click', () =>{
+                let videoID = video.getAttribute("data-video-id")
+                localStorage.setItem('Id', videoID)
+                window.location.href = 'start.html';
+            })
+        })
 }
 let screenvideo= async()=>{
     let id = localID

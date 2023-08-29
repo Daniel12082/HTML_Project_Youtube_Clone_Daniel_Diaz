@@ -31,12 +31,10 @@ let video =async()=>{
     `)
 /*Funcion que guarda el id del video en localstorage y lo llamo en el el javascript del reproductor de video*/
     const info = document.querySelectorAll(".vid-list")
-        console.log(info);
         
         info.forEach(video =>{
             video.addEventListener('click', () =>{
                 let videoID = video.getAttribute("data-video-id")
-                console.log(videoID);
                 localStorage.setItem('Id', videoID)
                 window.location.href = 'start.html';
             })

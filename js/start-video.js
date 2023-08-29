@@ -49,7 +49,7 @@ let screenvideo= async()=>{
         <p>${cha.joinedDateText} </p>
         <p>${det.description}</p>
         <hr>
-        <h4>Los comentarios están desactivados.</h4>
+        <h4>The comments are disabled.</h4>
     </div>
     `)
 }

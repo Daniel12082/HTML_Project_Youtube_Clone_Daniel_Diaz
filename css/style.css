@@ -41,7 +41,10 @@ nav{
 .nav-left .logo{
     width: 90px;
 }
-
+.nav-middle{
+    display: flex;
+    flex-direction: column;
+}
 .nav-middle .mic-icon{
     width: 16px;
 }
@@ -60,7 +63,9 @@ nav{
 .nav-middle .search-box img{
     width: 15px;
 }
-/*------SIDER-BAR---------*/
+/*------RESULT-BOX------*/
+
+/*------SIDEBAR---------*/
 .sidebar{
     background: #fff;
     width: 15%;

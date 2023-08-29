@@ -16,6 +16,7 @@ let listvideo =async()=>{
         </div>`).join(" ")}
     `)
 }
+
 let screenvideo= async()=>{
     let channel = await fetch(`../json/channel.json`);
     let details = await fetch(`../json/videodetils.json`);

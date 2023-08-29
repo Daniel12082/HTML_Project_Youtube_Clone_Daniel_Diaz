@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/Youtube_logo.png">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script  src="js/main.js" type="module"></script>
     <title>Youtube</title>
 </head>
 <body>
@@ -19,7 +19,12 @@
                 <input type="text" placeholder="Search">
                 <img src="img/search.png" alt="Search">
             </div>
-            <img src="img/voice-search.png" class="mic-icon">
+            <div style="flex-direction:column;width: 100%;overflow:hidden;">
+                <div style="margin-top:5px; width: 440px ; height: 300px;padding-left: 30px;">
+                    <ul id="SearchAll" style="font-family: Arial, Helvetica, sans-serif; font-size: 17px;">
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="nav-right flex-div">
             <img src="img/upload.png">
@@ -42,7 +47,7 @@
     <div class="list-container" id="videos">
     </div>
 </div>
-<script  src="js/main.js"></script>
+
 <script  src="js/principal.js"></script>
 </body>
 </html>

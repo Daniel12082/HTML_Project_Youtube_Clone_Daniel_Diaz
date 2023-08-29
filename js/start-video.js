@@ -41,7 +41,7 @@ let screenvideo= async()=>{
         <img src="${det.author.avatar[2].url}">
         <div>
             <p>${det.author.title}</p>
-            <span>${det.author.subscribers}</span>
+            <span>${det.author.stats.subscribersText}</span>
         </div>
         <button type="button">Subscribe</button>
     </div>

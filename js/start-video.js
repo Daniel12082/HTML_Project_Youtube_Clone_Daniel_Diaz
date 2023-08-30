@@ -2,7 +2,7 @@ let localID = localStorage.getItem('Id')
 
 const urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
 const url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
-const urlchanel =``
+const urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
 	method: 'GET',
 	headers: {
@@ -13,7 +13,7 @@ const options = {
 
 let listvideo =async()=>{
     let videos = await fetch(urls,options);
-    let channel = await fetch(`../json/channel.json`);
+    let channel = await fetch(urlchanel,options);
     let vid = await videos.json();
     let cha = await channel.json();
     let Selection = document.querySelector("#videos");
@@ -41,7 +41,7 @@ let listvideo =async()=>{
 let screenvideo= async()=>{
     let id = localID
     console.log(id)
-    let channel = await fetch(`../json/channel.json`);
+    let channel = await fetch(urlchanel,options);
     let details = await fetch(url,options);
     let det = await details.json();
     let cha = await channel.json();

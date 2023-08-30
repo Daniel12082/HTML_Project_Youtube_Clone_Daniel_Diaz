@@ -1,7 +1,15 @@
 var menuIcon = document.querySelector(".menu-icon"); 
 var sidebar = document.querySelector(".sidebar");    
 var container = document.querySelector(".container"); 
-
+const urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+const urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'e0bebbf360msha2b9e8f73d1e2aap10ff3cjsnd5d276805e77',
+		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+	}
+};
 /*Funcion que abre la sidebar al precionar el icono */
 menuIcon.onclick = function() { 
     sidebar.classList.toggle("small-sidebar");
@@ -10,8 +18,8 @@ menuIcon.onclick = function() {
 
 /*Funcion que trae todos los video de la pagina principal*/
 let video =async()=>{
-    let videos = await fetch(`../json/videos.json`);
-    let channel = await fetch(`../json/channel.json`);
+    let videos = await fetch(urls,options);
+    let channel = await fetch(urlchanel,options);
     let vid = await videos.json();
     let cha = await channel.json();
     let Selection = document.querySelector("#videos");

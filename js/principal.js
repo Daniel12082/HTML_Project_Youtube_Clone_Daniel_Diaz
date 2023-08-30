@@ -3,8 +3,8 @@ var sidebar = document.querySelector(".sidebar");
 var container = document.querySelector(".container");
 var urls = null
 var urlchanel = null
-//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-//var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
 	method: 'GET',
 	headers: {
@@ -17,10 +17,8 @@ menuIcon.onclick = function() {
     sidebar.classList.toggle("small-sidebar");
     container.classList.toggle("large-container");
 }
-
 /*Funcion que trae todos los video de la pagina principal*/
 let video =async()=>{
-
     let videos = await fetch(urls ? urls :"../json/videos.json", options);
     let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
     let vid = await videos.json();
@@ -33,11 +31,9 @@ let video =async()=>{
         }
         return array;
     }
-
     const parametro = vid.contents
     const newcontents = newarray(parametro)
     let Selection = document.querySelector("#videos");
-
     /*Ingreso de datos de los video al htmls */
     Selection.insertAdjacentHTML("beforeend",/*html*/ `
         ${newcontents.map((value)=>/*html*/` 
@@ -70,7 +66,6 @@ let video =async()=>{
     </div>
     `)
 }
-
 let sidebaright = async()=>{
     let sidebarpos = await fetch(`../json/config.json`);
     let sid = await sidebarpos.json();

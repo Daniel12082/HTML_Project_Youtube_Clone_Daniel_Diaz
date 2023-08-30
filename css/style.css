@@ -149,7 +149,6 @@ nav{
     width: 50%;
     margin-bottom: 25px;
 }
-
 .container{
     background: #f9f9f9;
     padding-left: 17%;
@@ -159,11 +158,9 @@ nav{
 }
 .large-container{
     padding-left: 7%;
-
 }
 .banner{
     width: 100%;
-
 }
 .banner img{
     width: 100%;
@@ -221,7 +218,6 @@ nav{
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 17px;
 }
-
 @media(max-width:1024px){
     .row{
         display: flex;
@@ -233,7 +229,6 @@ nav{
     }
     .menu-icon{
         display: none;
-
     }
     .sidebar{
         display: none;

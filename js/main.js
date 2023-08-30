@@ -1,8 +1,6 @@
-
 var menuIcon = document.querySelector(".menu-icon"); 
 var sidebar = document.querySelector(".sidebar");    
 var container = document.querySelector(".container"); 
-
 menuIcon.onclick = function() { 
     sidebar.classList.toggle("small-sidebar");
     container.classList.toggle("large-container");
@@ -19,7 +17,6 @@ document.querySelector("#chartSearch").addEventListener("click", (e) => {
     const activeElement = document.querySelector("#active"); // Obtén el elemento con ID "active"
     activeElement.style.visibility="visible"; // Mostrar la barra de busqueda
 });
-
 document.addEventListener("click", (e) => {
     const activeElement = document.querySelector("#active");
     if (e.target !== activeElement) {

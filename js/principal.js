@@ -1,12 +1,14 @@
 var menuIcon = document.querySelector(".menu-icon"); 
 var sidebar = document.querySelector(".sidebar");    
-var container = document.querySelector(".container"); 
-const urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-const urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+var container = document.querySelector(".container");
+var urls = null
+var urlchanel = null
+//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+//var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'e0bebbf360msha2b9e8f73d1e2aap10ff3cjsnd5d276805e77',
+		'X-RapidAPI-Key': 'ac71e22b93mshaefd587986470d2p16c0c9jsnafc7ac1f05fa',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };
@@ -18,13 +20,27 @@ menuIcon.onclick = function() {
 
 /*Funcion que trae todos los video de la pagina principal*/
 let video =async()=>{
-    let videos = await fetch(urls,options);
-    let channel = await fetch(urlchanel,options);
+
+    let videos = await fetch(urls ? urls :"../json/videos.json", options);
+    let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
     let vid = await videos.json();
     let cha = await channel.json();
+    /*Funcion Para reordenar los video y que sean random */
+    function newarray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    const parametro = vid.contents
+    const newcontents = newarray(parametro)
     let Selection = document.querySelector("#videos");
+
+    /*Ingreso de datos de los video al htmls */
     Selection.insertAdjacentHTML("beforeend",/*html*/ `
-        ${vid.contents.map((value)=>/*html*/` 
+        ${newcontents.map((value)=>/*html*/` 
         <div class="vid-list" data-video-id="${value.video.videoId}">
             <a href="start.html"><img src="${value.video.thumbnails[3].url}" class="thumbnai1"></a>
             <div class="flex-div">

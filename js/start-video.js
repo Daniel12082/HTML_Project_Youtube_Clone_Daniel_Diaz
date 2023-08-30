@@ -2,19 +2,19 @@ let localID = localStorage.getItem('Id')
 var urls=null
 var url=null
 var urlchanel=null
-//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-//var url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
-//var urlchanel = `https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+var url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
+var urlchanel = `https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'ac71e22b93mshaefd587986470d2p16c0c9jsnafc7ac1f05fa',
+        'X-RapidAPI-Key': 'e508798965msh2a10695dc44196fp132678jsnfb54a0e8f81b',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
 
 let listvideo = async () => {
-    let videos = await fetch(urls ? urls :"../json/videos.json", options);
+    let videos = await fetch(urls, options);
     let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
     let vid = await videos.json();
     let cha = await channel.json();

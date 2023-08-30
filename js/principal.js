@@ -3,12 +3,12 @@ var sidebar = document.querySelector(".sidebar");
 var container = document.querySelector(".container");
 var urls = null
 var urlchanel = null
-//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-//var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'ac71e22b93mshaefd587986470d2p16c0c9jsnafc7ac1f05fa',
+		'X-RapidAPI-Key': 'e508798965msh2a10695dc44196fp132678jsnfb54a0e8f81b',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };
@@ -55,7 +55,6 @@ let video =async()=>{
     `)
 /*Funcion que guarda el id del video en localstorage y lo llamo en el el javascript del reproductor de video*/
     const info = document.querySelectorAll(".vid-list")
-        
         info.forEach(video =>{
             video.addEventListener('click', () =>{
                 let videoID = video.getAttribute("data-video-id")

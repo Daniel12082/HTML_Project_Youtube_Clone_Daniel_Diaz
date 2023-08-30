@@ -14,14 +14,14 @@
             <img src="img/menu.png" alt="menu" class="menu-icon">
             <img src="img/logo.png" alt="logo" class="logo">
         </div>
-        <div class="nav-middle flex-div">
+        <div class="nav-middle flex-div" style="display: flex; flex-direction: column;">
             <div class="search-box flex-div">
-                <input type="text" placeholder="Search">
+                <input id="chartSearch" type="text" placeholder="Search">
                 <img src="img/search.png" alt="Search">
             </div>
-            <div class="box-search-result">
-                <div class="box-search-results">
-                    <ul id="SearchAll">
+            <div style="flex-direction: column; width: 100%; overflow: visible;">
+                <div id="active" style="margin-top: 5px; width: 440px; padding-left: 30px; padding-top: 10px; position: absolute; z-index: 5; background: rgb(255,255, 255); border-radius: 2px; overflow-y: auto; border:1px solid black ;height: 0px;visibility: hidden;">
+                    <ul id="SearchAll" style=" font-family: Arial, Helvetica, sans-serif; font-size: 17px;">
                     </ul>
                 </div>
             </div>
@@ -47,7 +47,6 @@
     <div class="list-container" id="videos">
     </div>
 </div>
-
 <script  src="js/principal.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ document.querySelector("#chartSearch").addEventListener("click", (e) => {
 document.addEventListener("click", (e) => {
     const activeElement = document.querySelector("#active");
     if (e.target !== activeElement) {
-activeElement.style.height = "0px";
+activeElement.style.visibility="visible";
 }
 });
 SearchAll()

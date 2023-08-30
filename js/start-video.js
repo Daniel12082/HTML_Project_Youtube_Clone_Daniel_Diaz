@@ -2,9 +2,9 @@ let localID = localStorage.getItem('Id')
 var urls=null
 var url=null
 var urlchanel=null
-var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-var url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
-var urlchanel = `https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+//var url = `https://youtube138.p.rapidapi.com/video/details/?id=${localID}&hl=en&gl=US`;
+//var urlchanel = `https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
     method: 'GET',
     headers: {

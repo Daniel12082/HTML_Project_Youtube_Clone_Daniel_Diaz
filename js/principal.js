@@ -3,8 +3,8 @@ var sidebar = document.querySelector(".sidebar");
 var container = document.querySelector(".container");
 var urls = null
 var urlchanel = null
-var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
-var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
+//var urls = `https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`;
+//var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US`
 const options = {
 	method: 'GET',
 	headers: {

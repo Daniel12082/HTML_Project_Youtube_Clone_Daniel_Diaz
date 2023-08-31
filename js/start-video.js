@@ -8,13 +8,13 @@ var urlchanel = `https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjc
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'e508798965msh2a10695dc44196fp132678jsnfb54a0e8f81b',
+        'X-RapidAPI-Key': 'da3f7e9588mshb54e3de64184886p154afcjsnc803f0e29d9d',
         'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
 let listvideo = async () => {
     let videos = await fetch(urls, options);
-    let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
+    let channel = await fetch(urlchanel, options);
     let vid = await videos.json();
     let cha = await channel.json();
     function newarray(array) {
@@ -57,8 +57,8 @@ let listvideo = async () => {
 let screenvideo = async () => {
     let id = localID
     console.log(id)
-    let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
-    let details = await fetch(url ? url: "../json/videodetils.json", options);
+    let channel = await fetch(urlchanel, options);
+    let details = await fetch(url, options);
     let det = await details.json();
     let cha = await channel.json();
     let Selection2 = document.querySelector("#play-video");

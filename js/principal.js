@@ -8,7 +8,7 @@ var urlchanel =`https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'e508798965msh2a10695dc44196fp132678jsnfb54a0e8f81b',
+		'X-RapidAPI-Key': 'da3f7e9588mshb54e3de64184886p154afcjsnc803f0e29d9d',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };
@@ -19,8 +19,8 @@ menuIcon.onclick = function() {
 }
 /*Funcion que trae todos los video de la pagina principal*/
 let video =async()=>{
-    let videos = await fetch(urls ? urls :"../json/videos.json", options);
-    let channel = await fetch(urlchanel ? urlchanel : "../json/channel.json", options);
+    let videos = await fetch(urls, options);
+    let channel = await fetch(urlchanel, options);
     let vid = await videos.json();
     let cha = await channel.json();
     /*Funcion Para reordenar los video y que sean random */

@@ -1,6 +1,6 @@
 const options = {
 	headers: {
-		'X-RapidAPI-Key': 'e508798965msh2a10695dc44196fp132678jsnfb54a0e8f81b',
+		'X-RapidAPI-Key': 'da3f7e9588mshb54e3de64184886p154afcjsnc803f0e29d9d',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };
